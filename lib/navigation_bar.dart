@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram1/pages/home_screen.dart';
+import 'package:instagram1/pages/profile.dart';
 import 'package:instagram1/pages/search_screen.dart';
 
 class welcomePage extends StatefulWidget {
@@ -31,15 +32,7 @@ class _welcomePageState extends State<welcomePage> {
         style: TextStyle(color: Colors.black87),
       )),
     ),
-    Card(
-      elevation: 10,
-      color: Colors.white,
-      child: Center(
-          child: Text(
-        'favorate',
-        style: TextStyle(color: Colors.black87),
-      )),
-    ),
+    profile()
   ];
   var selectedindex = 0;
 

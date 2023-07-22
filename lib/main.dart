@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:instagram1/navigation_bar.dart';
 import 'package:instagram1/pages/splash_screen.dart';
 
 void main(){
@@ -12,6 +11,7 @@ class Myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
       home: splashScreen(),
       debugShowCheckedModeBanner: false,
     );
