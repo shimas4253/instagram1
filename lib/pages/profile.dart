@@ -230,14 +230,15 @@ class profile extends StatelessWidget {
                           ],
                         )),
                     Padding(
-                      padding: const EdgeInsets.only(top:8),
+                      padding: const EdgeInsets.only(top: 8),
                       child: Container(
                         height: 500,
                         child: GridView.builder(
                           shrinkWrap: true,
                           physics: ScrollPhysics(),
                           itemCount: profiles.length,
-                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 3,
                           ),
                           itemBuilder: (BuildContext context, int index) {

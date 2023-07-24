@@ -25,10 +25,10 @@ class homeScreen extends StatelessWidget {
     'Amazing',
     ' Attitude',
     'Awesome',
-        'Awkward',
-        'Balance',
-        'Blessed',
-        'Blessing'
+    'Awkward',
+    'Balance',
+    'Blessed',
+    'Blessing'
   ];
   var posts = [
     'assets/images/post.jpeg',
@@ -84,46 +84,47 @@ class homeScreen extends StatelessWidget {
               child: Container(
                 height: 86,
                 child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children:[
-                    Column(
-                      children: [
-                        Stack(
-                          alignment: Alignment.bottomRight,
-                          children: [
-                            CircleAvatar(
-                              radius: 35,
-                              backgroundImage: AssetImage('assets/images/me.jpeg'),
-                            ),
-                            CircleAvatar(
-                              radius: 10,
-                              child: Center(child: Icon(Icons.add)),
-                            )
-                          ],
-                        ),
-                        Text('your story'),
-                      ],
-                    ),
-                    SizedBox(width: 5,),
-                    ListView.separated(
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (contex, index) {
-                        return Column(
-                          children: [
-                            CircleAvatar(
-                              backgroundImage: AssetImage(profiles[index]),
-                              radius: 35,
-                            ),
-                            Text(names[index])
-                          ],
-                        );
-                      },
-                      separatorBuilder: (contex, index) {
-                        return Padding(padding: EdgeInsets.all(5));
-                      },
-                      itemCount: profiles.length),
-                ]),
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      Column(
+                        children: [
+                          Stack(
+                            alignment: Alignment.bottomRight,
+                            children: [
+                              CircleAvatar(
+                                radius: 35,
+                                backgroundImage: AssetImage(
+                                    'assets/images/me.jpeg'),
+                              ),
+                              CircleAvatar(
+                                radius: 10,
+                                child: Center(child: Icon(Icons.add)),
+                              )
+                            ],
+                          ),
+                          Text('your story'),
+                        ],
+                      ),
+                      SizedBox(width: 5,),
+                      ListView.separated(
+                          shrinkWrap: true,
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (contex, index) {
+                            return Column(
+                              children: [
+                                CircleAvatar(
+                                  backgroundImage: AssetImage(profiles[index]),
+                                  radius: 35,
+                                ),
+                                Text(names[index])
+                              ],
+                            );
+                          },
+                          separatorBuilder: (contex, index) {
+                            return Padding(padding: EdgeInsets.all(5));
+                          },
+                          itemCount: profiles.length),
+                    ]),
               ),
             ),
             ListView.separated(
@@ -144,7 +145,7 @@ class homeScreen extends StatelessWidget {
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsets.only(left: 5.0, right: 5, top: 5),
+                        const EdgeInsets.only(left: 5.0, right: 5, top: 5),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
@@ -175,7 +176,8 @@ class homeScreen extends StatelessWidget {
                       Row(
                         children: [
                           IconButton(
-                              onPressed: () {}, icon: Icon(Icons.favorite_border_outlined)),
+                              onPressed: () {}, icon: Icon(
+                              Icons.favorite_border_outlined)),
                           IconButton(
                               onPressed: () {}, icon: Icon(Icons.comment)),
                           IconButton(
@@ -184,12 +186,13 @@ class homeScreen extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.only(left: 219.0),
                             child: IconButton(
-                                onPressed: () {}, icon: Icon(Icons.bookmark_border)),
+                                onPressed: () {},
+                                icon: Icon(Icons.bookmark_border)),
                           )
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left:10),
+                        padding: const EdgeInsets.only(left: 10),
                         child: Text(
                           captions[index],
                           style: TextStyle(

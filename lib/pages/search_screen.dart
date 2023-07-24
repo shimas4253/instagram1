@@ -9,7 +9,7 @@ var image = [
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb9iDPi3HniEkNc8T2B3ZWXPawjRHdfZcZ3Q&usqp=CAU',
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReFjO6rbNAKcZtfgpqkhnqWGPwcH5hAArN1A&usqp=CAU',
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUT2jLYoIC9Lg65AVA5KhEUdJdWFm0-vznZg&usqp=CAU',
- 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb9iDPi3HniEkNc8T2B3ZWXPawjRHdfZcZ3Q&usqp=CAU',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb9iDPi3HniEkNc8T2B3ZWXPawjRHdfZcZ3Q&usqp=CAU',
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb9iDPi3HniEkNc8T2B3ZWXPawjRHdfZcZ3Q&usqp=CAU',
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQBQQfBzEsqTN91MHwdukq0yaBxWIcn5RjUw&usqp=CAU',
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReFjO6rbNAKcZtfgpqkhnqWGPwcH5hAArN1A&usqp=CAU',
@@ -23,7 +23,6 @@ var image = [
 ];
 
 class searchScreen extends StatelessWidget {
-
   final List<StaggeredTile> cartTile = <StaggeredTile>[
     StaggeredTile.count(1, 1),
     StaggeredTile.count(1, 1),
@@ -80,13 +79,12 @@ class searchScreen extends StatelessWidget {
                     height: 40,
                     child: TextField(
                         decoration: InputDecoration(
-
                       filled: true,
                       fillColor: Colors.grey[350],
                       prefixIcon: Icon(Icons.search),
                       labelText: 'Search here',
                       enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white,width: 3),
+                          borderSide: BorderSide(color: Colors.white, width: 3),
                           borderRadius: BorderRadius.circular(10)),
                     )),
                   ),
@@ -120,7 +118,10 @@ class tiles extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       margin: EdgeInsets.zero,
-      child: Image(image: NetworkImage(bgimage),fit: BoxFit.fill,),
+      child: Image(
+        image: NetworkImage(bgimage),
+        fit: BoxFit.fill,
+      ),
     );
   }
 }

@@ -25,22 +25,26 @@ class _splashScreenState extends State<splashScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top:270,left: 150),
+            padding: const EdgeInsets.only(top: 270, left: 150),
             child: Image(
                 image: NetworkImage(
                     'https://cdn-icons-png.flaticon.com/512/733/733558.png',
                     scale: 5)),
           ),
           Padding(
-            padding: const EdgeInsets.only(top:200,left: 150),
+            padding: const EdgeInsets.only(top: 200, left: 150),
             child: Text(
               'from',
               style: TextStyle(color: Colors.black54),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left:150),
-            child: Image(image: AssetImage('assets/images/meta (2).png'),height: 50,width: 120,),
+            padding: const EdgeInsets.only(left: 150),
+            child: Image(
+              image: AssetImage('assets/images/meta (2).png'),
+              height: 50,
+              width: 120,
+            ),
           )
         ],
       ),
