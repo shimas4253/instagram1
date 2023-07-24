@@ -14,4 +14,3 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
-![instagramm home](https://github.com/shimas4253/instagram1/assets/113816927/2fabd068-084e-422b-9b81-475d59eeaf53)
