@@ -12,7 +12,7 @@ class homeScreen extends StatelessWidget {
     'assets/images/profile.jpeg'
   ];
   var names = [
-    'your profile',
+    'cristiano',
     '_siyad___',
     'safvan__kt',
     'habibi___',
@@ -64,7 +64,7 @@ class homeScreen extends StatelessWidget {
           IconButton(
               onPressed: () {},
               icon: Icon(
-                Icons.heart_broken,
+                Icons.favorite_border_outlined,
                 color: Colors.black,
               )),
           IconButton(
@@ -80,27 +80,50 @@ class homeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 8.0, left: 8, right: 8),
+              padding: const EdgeInsets.all(8.0),
               child: Container(
-                height: 97,
-                child: ListView.separated(
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (contex, index) {
-                      return Column(
-                        children: [
-                          CircleAvatar(
-                            backgroundImage: AssetImage(profiles[index]),
-                            radius: 40,
-                          ),
-                          Text(names[index])
-                        ],
-                      );
-                    },
-                    separatorBuilder: (contex, index) {
-                      return Padding(padding: EdgeInsets.all(5));
-                    },
-                    itemCount: profiles.length),
+                height: 86,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children:[
+                    Column(
+                      children: [
+                        Stack(
+                          alignment: Alignment.bottomRight,
+                          children: [
+                            CircleAvatar(
+                              radius: 35,
+                              backgroundImage: AssetImage('assets/images/me.jpeg'),
+                            ),
+                            CircleAvatar(
+                              radius: 10,
+                              child: Center(child: Icon(Icons.add)),
+                            )
+                          ],
+                        ),
+                        Text('your story'),
+                      ],
+                    ),
+                    SizedBox(width: 5,),
+                    ListView.separated(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (contex, index) {
+                        return Column(
+                          children: [
+                            CircleAvatar(
+                              backgroundImage: AssetImage(profiles[index]),
+                              radius: 35,
+                            ),
+                            Text(names[index])
+                          ],
+                        );
+                      },
+                      separatorBuilder: (contex, index) {
+                        return Padding(padding: EdgeInsets.all(5));
+                      },
+                      itemCount: profiles.length),
+                ]),
               ),
             ),
             ListView.separated(
@@ -152,16 +175,16 @@ class homeScreen extends StatelessWidget {
                       Row(
                         children: [
                           IconButton(
-                              onPressed: () {}, icon: Icon(Icons.heart_broken)),
+                              onPressed: () {}, icon: Icon(Icons.favorite_border_outlined)),
                           IconButton(
                               onPressed: () {}, icon: Icon(Icons.comment)),
                           IconButton(
                               onPressed: () {},
-                              icon: Icon(Icons.screen_share_outlined)),
+                              icon: Icon(Icons.telegram)),
                           Padding(
                             padding: const EdgeInsets.only(left: 219.0),
                             child: IconButton(
-                                onPressed: () {}, icon: Icon(Icons.save_alt)),
+                                onPressed: () {}, icon: Icon(Icons.bookmark_border)),
                           )
                         ],
                       ),

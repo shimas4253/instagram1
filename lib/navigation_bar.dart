@@ -40,6 +40,7 @@ class _welcomePageState extends State<welcomePage> {
     return Scaffold(
       body: screens[selectedindex],
       bottomNavigationBar: BottomNavigationBar(
+        elevation: 20,
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.red,
         unselectedItemColor: Colors.black,
