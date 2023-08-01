@@ -1,7 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:instagram1/data_base/db_functions/functions.dart';
 import 'package:instagram1/navigation_bar.dart';
+import 'package:instagram1/pages/login_page.dart';
 
 class splashScreen extends StatefulWidget {
   const splashScreen({Key? key}) : super(key: key);
@@ -12,10 +14,9 @@ class splashScreen extends StatefulWidget {
 
 class _splashScreenState extends State<splashScreen> {
   void initState() {
-    Timer(Duration(seconds: 5), () {
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => welcomePage()));
-    });
+
+    super.initState();
+    checkuserLogin();
   }
 
   @override
@@ -50,4 +51,22 @@ class _splashScreenState extends State<splashScreen> {
       ),
     );
   }
+
+  gotoLogin() async {
+    Navigator.of(context)
+        .pushReplacement(MaterialPageRoute(builder: (context) => loginpage()));
+  }
+
+  checkuserLogin() async {
+    getStudent();
+    final _userLogin = studentListModel.value;
+    if (_userLogin.isEmpty) {
+      gotoLogin();
+    } else {
+      Future.delayed(Duration(seconds: 3));
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => welcomePage()));
+    }
+  }
 }
+
